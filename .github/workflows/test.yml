@@ -22,3 +22,5 @@ jobs:
             "https://api.github.com/repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA?access_token=$GITHUB_TOKEN"
         env:
           GITHUB_TOKEN: ${{ steps.githubAppAuth.outputs.token }}
+      - name: echo Auth Token
+        run: echo ${{ steps.githubAppAuth.outputs.token }}
